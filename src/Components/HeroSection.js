@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 const HeroSection = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(!isOpen);
+    const [activeLink, setActiveLink] = useState('');
+
 
   return (
     <section className="w-full min-h-screen flex flex-col md:flex-row">
@@ -30,9 +32,13 @@ const HeroSection = () => {
           We create brand experiences which are memorable and distinct. Our experienced
           team create and develop brands with personality and resonance.
         </p>
-        <a href="#" className="mt-6 text-pink-600 underline font-semibold ml-4">
-          Let’s talk
+        <a
+            href="#"
+            className="mt-6 ml-4 font-semibold text-black-600 underline transition duration-300 ease-in-out transform hover:scale-105 hover:text-pink-800"
+            >
+            Let’s talk
         </a>
+
       </div>
 
       {/* Right Image Section */}
@@ -43,13 +49,28 @@ const HeroSection = () => {
         {/* Nav Wrapper */}
         <div className="absolute top-4 right-4 md:top-8 md:right-8">
           {/* Desktop Nav */}
-          <div className="hidden md:flex space-x-6">
+          {/* <div className="hidden md:flex space-x-6">
             <a href="#services" className="text-white hover:text-blue-300">Services</a>
             <a href="#work" className="text-white hover:text-blue-300">Work</a>
             <a href="#about" className="text-white hover:text-blue-300">About</a>
             <a href="#blog" className="text-white hover:text-blue-300">Blog</a>
             <a href="#contact" className="text-white hover:text-blue-300">Contact</a>
-          </div>
+          </div> */}
+
+          <div className="hidden md:flex space-x-6">
+            {['services', 'work', 'about', 'blog', 'contact'].map((item) => (
+                <a
+                key={item}
+                href={`#${item}`}
+                onClick={() => setActiveLink(item)}
+                className={`${
+                    activeLink === item ? 'text-blue-300 underline' : 'text-white'
+                } hover:text-white-300 transition-colors`}
+                >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+                </a>
+            ))}
+            </div>
 
           {/* Hamburger Button (Mobile) */}
           <div className="md:hidden">

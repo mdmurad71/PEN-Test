@@ -33,10 +33,11 @@ export default function Capability() {
             {/* Brand */}
             <h4 className="font-semibold text-gray-900 uppercase mb-4">Brand</h4>
             <ul className="space-y-2 text-gray-800 mb-8">
-              <li>Brand Strategy</li>
-              <li>Logo &amp; Name</li>
-              <li>Identity &amp; Collateral</li>
+            <li className="hover:text-pink-600 cursor-pointer transition duration-300">Brand Strategy</li>
+            <li className="hover:text-pink-600 cursor-pointer transition duration-300">Logo &amp; Name</li>
+            <li className="hover:text-pink-600 cursor-pointer transition duration-300">Identity &amp; Collateral</li>
             </ul>
+
 
             {/* Development */}
             <h4 className="font-semibold text-gray-900 uppercase mb-4">Development</h4>

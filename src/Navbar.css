@@ -1,0 +1,16 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff; /* or your gradient */
+  transition: top 0.3s;
+  z-index: 1000;
+}
+
+.navbar--hidden {
+  top: -100px; /* hide it */
+}
+
+.navbar--visible {
+  top: 0;
+}
