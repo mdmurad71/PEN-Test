@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import HomePage from './Pages/HomePage';
 
 function App() {
   return (
@@ -23,9 +24,10 @@ function App() {
         // <h1 className="text-3xl font-bold underline">
         //   Hello world!
         // </h1>
-        <button className="bg-blue-500 text-white px-4 py-2 rounded">
-          Click Me
-      </button>
+      //   <button className="bg-blue-500 text-white px-4 py-2 rounded">
+      //     Click Me
+      // </button>
+      <HomePage></HomePage>
   );
 }
 
